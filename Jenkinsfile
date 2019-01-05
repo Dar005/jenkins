@@ -9,15 +9,15 @@ pipeline {
         submoduleCfg: [],
         userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
    )
-}
-        stage('Build'){
+
+   stage('Build'){
         echo "Inside build stage"
-            step{
-                bat 'make'
-                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
-            }
+        step{
+            bat 'make'
+            archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
         }
+   }
 
    echo "From jenkins file!!!....."
 
-
+}
