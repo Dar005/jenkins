@@ -8,7 +8,6 @@ node {
         userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
    )
 
-   stages{
         stage('Build'){
         echo "Inside build stage"
             steps{
@@ -16,7 +15,7 @@ node {
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
             }
         }
-   }
+   
    echo "From jenkins file!!!....."
 }
 
