@@ -10,12 +10,12 @@ node {
 
         stage('Build'){
         echo "Inside build stage"
-            steps{
+            step{
                 bat 'make'
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
             }
         }
-   
+
    echo "From jenkins file!!!....."
 }
 
