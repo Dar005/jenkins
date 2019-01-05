@@ -10,7 +10,7 @@ node {
                         submoduleCfg: [],
                         userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
             )
-            bat 'Ant -d clean build'
+            bat '-d clean build'
 
             echo "From jenkins file!!!....."
 
