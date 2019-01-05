@@ -1,7 +1,5 @@
-pipeline{
+node {
 agent any
-    node {
-
 
        checkout(
             [$class: 'GitSCM',
@@ -26,6 +24,4 @@ agent any
 
        }
 
-    }
-
-}
+ }
