@@ -1,7 +1,7 @@
 node {
       stage ('Build and Test'){
 
-            env.PATH = "${tool 'Ant'}/bin:${env.PATH}"
+            env.PATH = "${tool 'Maven'}/bin:${env.PATH}"
             checkout(
                         [$class: 'GitSCM',
                         branches: [[name: '*/master']],
@@ -12,9 +12,9 @@ node {
             )
 
             withAnt(installation: 'Ant') {
-               bat "ant build"
+               bat "maven build"
             }
-          
+
             echo "From jenkins file!!!....."
 
       }
