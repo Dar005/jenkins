@@ -2,7 +2,9 @@ pipeline{
 
     stages{
 
-        stage('checkout'){
+        stage('build'){
+
+
                checkout(
                                     [$class: 'GitSCM',
                                     branches: [[name: '*/master']],
@@ -10,9 +12,8 @@ pipeline{
                                     extensions: [],
                                     submoduleCfg: [],
                                     userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
-                        )
-        }
-        stage('build'){
+               )
+
                bat 'mvn clean install'
         }
         echo "FUCK THIS........"
