@@ -14,5 +14,5 @@ node {
             echo "From jenkins file!!!....."
 
       }
-      bat 'build'
+      bat 'clean build'
  }
