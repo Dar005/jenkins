@@ -1,7 +1,7 @@
 node {
       stage ('Build and Test'){
 
-            env.PATH = "${tool 'ant'}/bin:${env.PATH}"
+            env.PATH = "${tool 'Ant'}/bin:${env.PATH}"
             checkout(
                         [$class: 'GitSCM',
                         branches: [[name: '*/master']],
@@ -10,7 +10,7 @@ node {
                         submoduleCfg: [],
                         userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
             )
-            bat 'make'
+            bat 'Ant build'
 
             echo "From jenkins file!!!....."
 
