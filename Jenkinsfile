@@ -7,6 +7,16 @@ node {
         submoduleCfg: [],
         userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
    )
+
+   stages{
+        stage('Build'){
+        echo "Inside build stage"
+            steps{
+                bat 'make'
+                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+            }
+        }
+   }
    echo "From jenkins file!!!....."
 }
 
