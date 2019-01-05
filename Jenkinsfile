@@ -1,7 +1,7 @@
 node {
       stage ('Build and Test'){
 
-            env.PATH = "${tool 'Ant'}/bin:${env.PATH}"
+            env.PATH = "${tool 'ant'}/bin:${env.PATH}"
             checkout(
                         [$class: 'GitSCM',
                         branches: [[name: '*/master']],
