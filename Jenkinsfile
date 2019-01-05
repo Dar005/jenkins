@@ -1,22 +1,23 @@
-node {
-      stage ('Build and Test'){
+pipeline{
 
-            env.PATH = "${tool 'Maven'}/bin:${env.PATH}"
-            checkout(
-                        [$class: 'GitSCM',
-                        branches: [[name: '*/master']],
-                        doGenerateSubmoduleConfigurations: false,
-                        extensions: [],
-                        submoduleCfg: [],
-                        userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
-            )
+    stages{
 
-            withAnt(installation: 'Ant') {
-               bat "maven build"
-            }
+        stage('checkout'){
+               checkout(
+                                    [$class: 'GitSCM',
+                                    branches: [[name: '*/master']],
+                                    doGenerateSubmoduleConfigurations: false,
+                                    extensions: [],
+                                    submoduleCfg: [],
+                                    userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
+                        )
+        }
+        stage('build'){
+               bat 'mvn clean install'
+        }
+        echo "FUCK THIS........"
 
-            echo "From jenkins file!!!....."
+    }
 
-      }
 
- }
+}
