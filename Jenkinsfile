@@ -1,4 +1,6 @@
-node {
+pipeline {
+
+   agent any
    checkout(
         [$class: 'GitSCM',
         branches: [[name: '*/master']],
