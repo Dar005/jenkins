@@ -10,7 +10,7 @@ node {
                         submoduleCfg: [],
                         userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
             )
-            bat 'Build and Test'
+            bat 'make'
 
             echo "From jenkins file!!!....."
 
