@@ -1,7 +1,7 @@
 node {
       stage ('Build and Test'){
 
-            env.PATH = "${tool 'Ant'}/bin:${env.PATH}"
+            env.PATH = "${tool 'Maven'}/bin:${env.PATH}"
             checkout(
                         [$class: 'GitSCM',
                         branches: [[name: '*/master']],
@@ -10,9 +10,9 @@ node {
                         submoduleCfg: [],
                         userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
             )
-
+            bat '-d clean build'
             echo "From jenkins file!!!....."
 
       }
-      bat '-d clean build'
+
  }
