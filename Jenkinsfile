@@ -4,7 +4,7 @@ pipeline{
 
         stage('build'){
 
-
+            node{
                checkout(
                                     [$class: 'GitSCM',
                                     branches: [[name: '*/master']],
@@ -13,8 +13,8 @@ pipeline{
                                     submoduleCfg: [],
                                     userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
                )
-
-               bat 'mvn clean install'
+            }
+            bat 'mvn clean install'
         }
         echo "FUCK THIS........"
 
