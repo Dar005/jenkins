@@ -10,18 +10,9 @@ agent any
             userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
        )
 
-       stages{
+       build 'DevOpsJenkins'
 
-           stage('Build'){
-                echo "Inside build stage"
-                step{
-                    bat 'make'
-                    archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
-                }
-           }
+       echo "From jenkins file!!!....."
 
-           echo "From jenkins file!!!....."
-
-       }
 
  }
