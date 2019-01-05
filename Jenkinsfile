@@ -1,4 +1,4 @@
-node{
+node ("windows") {
   stage ('Build') {
 
     git url: 'https://github.com/Dar005/jenkins.git'
