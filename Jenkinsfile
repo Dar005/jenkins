@@ -1,23 +1,27 @@
-pipeline {
+pipeline{
 
-   agent any
-   checkout(
-        [$class: 'GitSCM',
-        branches: [[name: '*/master']],
-        doGenerateSubmoduleConfigurations: false,
-        extensions: [],
-        submoduleCfg: [],
-        userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
-   )
+    node {
 
-   stage('Build'){
-        echo "Inside build stage"
-        step{
-            bat 'make'
-            archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
-        }
-   }
+       agent any
+       checkout(
+            [$class: 'GitSCM',
+            branches: [[name: '*/master']],
+            doGenerateSubmoduleConfigurations: false,
+            extensions: [],
+            submoduleCfg: [],
+            userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
+       )
 
-   echo "From jenkins file!!!....."
+       stage('Build'){
+            echo "Inside build stage"
+            step{
+                bat 'make'
+                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+            }
+       }
+
+       echo "From jenkins file!!!....."
+
+    }
 
 }
