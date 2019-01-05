@@ -7,7 +7,7 @@ node {
         submoduleCfg: [],
         userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
    )
-
+}
         stage('Build'){
         echo "Inside build stage"
             step{
@@ -17,5 +17,5 @@ node {
         }
 
    echo "From jenkins file!!!....."
-}
+
 
