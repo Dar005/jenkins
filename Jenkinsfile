@@ -20,6 +20,7 @@ node {
    stage('Build') {
         echo "IN BUILD"
 
+        cd C:\Program Files (x86)\Jenkins\workspace\Test
         javac Student.java
 
 
