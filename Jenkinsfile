@@ -10,7 +10,7 @@ node {
                )
 
     pipeline {
-    Sagent any
+    agent any
 
     stages {
         stage('Build') {
