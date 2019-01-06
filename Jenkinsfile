@@ -18,7 +18,7 @@ node {
    stage('Build') {
         echo "IN BUILD"
 
-        javac -cp Student.java
+        javac Student.java
 
 
    }
