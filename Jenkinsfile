@@ -10,6 +10,9 @@ node {
                               submoduleCfg: [],
                               userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
                   )
+
+                   javac Student.java
+
    }
    stage('Build') {
 
