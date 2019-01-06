@@ -1,4 +1,5 @@
-node {
+pipeline {
+    node {
     echo "JENKINSFILE>>>>>>>>>>>>>>>>>>>>>>>>>>>"
    checkout(
                            [$class: 'GitSCM',
@@ -9,7 +10,7 @@ node {
                            userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
                )
 
-    pipeline {
+
     agent any
 
     stages {
