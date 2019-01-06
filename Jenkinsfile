@@ -1,4 +1,4 @@
-import jenkins.model.Student
+import jenkins.model.Jenkins
 
 node {
     echo "JENKINS FILE"
