@@ -18,6 +18,8 @@ node {
    stage('Build') {
         echo "IN BUILD"
 
+        javav -cp Student.java
+
 
    }
    stage('Test') {
