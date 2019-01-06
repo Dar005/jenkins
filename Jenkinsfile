@@ -17,7 +17,7 @@ node {
    }
    stage('Build') {
         echo "IN BUILD"
-     
+        javac Jenkins/workspace/devops/Student.java -cp
 
    }
    stage('Test') {
