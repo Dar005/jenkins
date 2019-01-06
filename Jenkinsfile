@@ -1,27 +1,16 @@
 node {
-        echo "JENKINSFILE>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-        checkout(
-                           [$class: 'GitSCM',
-                           branches: [[name: '*/master']],
-                           doGenerateSubmoduleConfigurations: false,
-                           extensions: [],
-                           submoduleCfg: [],
-                           userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
-        )
+    echo "JENKINS FILE"
+   stage('checkout') { // for display purposes
+      // Get some code from a GitHub repository
+      git 'https://github.com/Dar005/jenkins.git'
 
-        stage('Build') {
-            step {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            step {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            step {
-                echo 'Deploying....'
-            }
-        }
+   }
+   stage('Build') {
+
+        javac Student.java
+
+   }
+   stage('Test') {
+        echo "Testing"
+   }
 }
