@@ -1,6 +1,6 @@
 node {
   stage ('Build') {
-
+        echo "JENKINSFILE>>>>>>>>>>>>>>>>>>>>>>>>>>>"
     git url:  'https://github.com/Dar005/jenkins/'
 
     withMaven(
@@ -15,4 +15,5 @@ node {
 
     } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe & FindBugs reports...
   }
+
 }
