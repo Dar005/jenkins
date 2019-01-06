@@ -1,5 +1,5 @@
-node {
-    echo "JENKINS FILE"
+pipeline("jenkins") {
+   echo "JENKINS FILE"
    stage('checkout') { // for display purposes
 
    echo "In CHECKOUT"
