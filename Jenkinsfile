@@ -20,7 +20,7 @@ node {
    stage('Build') {
         echo "IN BUILD"
 
-        cd \Jenkins\workspace\devops
+        cd Jenkins\workspace\devops
         javac Student.java
 
 
