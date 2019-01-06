@@ -1,8 +1,14 @@
 node {
     echo "JENKINSFILE>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-    checkout(
-        git url:  'https://github.com/Dar005/jenkins/'
-    )
+   checkout(
+                           [$class: 'GitSCM',
+                           branches: [[name: '*/master']],
+                           doGenerateSubmoduleConfigurations: false,
+                           extensions: [],
+                           submoduleCfg: [],
+                           userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
+               )
+
     pipeline {
     Sagent any
 
