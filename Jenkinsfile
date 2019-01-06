@@ -1,6 +1,5 @@
 node {
-   checkout scm
-   echo "In CHECKOUT"
+    echo "JENKINS FILE"
    stage('checkout') { // for display purposes
 
    echo "In CHECKOUT"
@@ -18,7 +17,7 @@ node {
    }
    stage('Build') {
         echo "IN BUILD FILE"
-        
+       
         echo "EXIT BUILD"
    }
    stage('Test') {
