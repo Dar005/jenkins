@@ -19,7 +19,7 @@ node {
    }
    stage('Build') {
         echo "IN BUILD"
-        javac Student.java
+        javac devops/Student.java
 
    }
    stage('Test') {
