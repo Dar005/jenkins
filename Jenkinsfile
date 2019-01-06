@@ -3,15 +3,14 @@ pipeline("jenkins") {
    stage('checkout') { // for display purposes
 
    echo "In CHECKOUT"
-      // Get some code from a GitHub repository
-       checkout(
+      // Get some code from a GitHub repositor
                               [$class: 'GitSCM',
                               branches: [[name: '*/master']],
                               doGenerateSubmoduleConfigurations: false,
                               extensions: [],
                               submoduleCfg: [],
                               userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
-                  )
+               
 
 
    }
