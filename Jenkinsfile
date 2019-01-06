@@ -7,7 +7,7 @@ node {
    }
    stage('Build') {
 
-        javac Student.java
+        javac Student
 
    }
    stage('Test') {
