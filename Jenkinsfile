@@ -1,8 +1,4 @@
-pipeline {
-    agent any
-
-
-    node {
+node {
         echo "JENKINSFILE>>>>>>>>>>>>>>>>>>>>>>>>>>>"
         checkout(
                            [$class: 'GitSCM',
@@ -34,4 +30,3 @@ pipeline {
         }
       }
     }
-}
