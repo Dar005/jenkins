@@ -1,3 +1,5 @@
+import jenkins.model.Student
+
 node {
     echo "JENKINS FILE"
    stage('checkout') { // for display purposes
