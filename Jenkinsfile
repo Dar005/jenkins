@@ -1,5 +1,3 @@
-import jenkins.model.Jenkins
-
 node {
     echo "JENKINS FILE"
    stage('checkout') { // for display purposes
