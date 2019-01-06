@@ -1,4 +1,4 @@
-import jenkins.model.Student
+import jenkins.model.Jenkins
 
 node {
     echo "JENKINS FILE"
@@ -19,7 +19,7 @@ node {
    }
    stage('Build') {
         echo "IN BUILD"
-        javac Student.java
+        javac studentAttendance.Student.java
 
    }
    stage('Test') {
