@@ -21,7 +21,7 @@ node {
         echo "IN BUILD"
 
         cd C:\Program Files (x86)\Jenkins\workspace\Test
-        javac Student.java
+        javac -cp Jenkins\workspace\Test;. Student.java
 
 
    }
