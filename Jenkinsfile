@@ -1,17 +1,20 @@
 pipeline {
+    agent any
+
+
     node {
-    echo "JENKINSFILE>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-   checkout(
+        echo "JENKINSFILE>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+        checkout(
                            [$class: 'GitSCM',
                            branches: [[name: '*/master']],
                            doGenerateSubmoduleConfigurations: false,
                            extensions: [],
                            submoduleCfg: [],
                            userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
-               )
+        )
 
 
-    agent any
+
 
     stages {
         stage('Build') {
