@@ -1,6 +1,8 @@
 node {
     echo "JENKINS FILE"
    stage('checkout') { // for display purposes
+
+   echo "In CHECKOUT"
       // Get some code from a GitHub repository
        checkout(
                               [$class: 'GitSCM',
@@ -11,15 +13,15 @@ node {
                               userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
                   )
 
-                   javac Student.java
 
    }
    stage('Build') {
+        echo "IN BUILD"
 
-        javac Student.java
 
    }
    stage('Test') {
+        "IN TESTING"
         echo "Testing"
    }
 }
