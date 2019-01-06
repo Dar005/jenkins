@@ -20,8 +20,6 @@ node {
    stage('Build') {
         echo "IN BUILD FILE"
 
-
-
    }
    stage('Test') {
         "IN TESTING"
