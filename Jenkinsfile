@@ -1,19 +1,7 @@
-pipeline("jenkins") {
-   echo "JENKINS FILE"
-   stage('checkout') { // for display purposes
-
+node {
+   checkout scm
    echo "In CHECKOUT"
-      // Get some code from a GitHub repositor
-                              [$class: 'GitSCM',
-                              branches: [[name: '*/master']],
-                              doGenerateSubmoduleConfigurations: false,
-                              extensions: [],
-                              submoduleCfg: [],
-                              userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
-               
-
-
-   }
+   
    stage('Build') {
         echo "IN BUILD FILE"
         javac -classpath C:/jars/junit-4.12.jar;C:/jars/hamcrest-core-1.3.jar;C:/Program_Files_(x86)/Jenkins/Jenkins/workspace/Test1/;. Student.java StudentTest.java
