@@ -17,8 +17,7 @@ node {
    }
    stage('Build') {
         echo "IN BUILD"
-        
-        java Student
+        javac -classpath "/Jenkins/workspace/devops/*" Student.java
 
    }
    stage('Test') {
