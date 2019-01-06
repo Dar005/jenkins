@@ -17,7 +17,7 @@ node {
    }
    stage('Build') {
         echo "IN BUILD"
-        javac -classpath "/devops/*" Student.java
+        javac -sourcepath devops Student.java
 
    }
    stage('Test') {
