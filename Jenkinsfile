@@ -9,10 +9,6 @@ node {
                            userRemoteConfigs: [[url: 'https://github.com/Dar005/jenkins/']]]
         )
 
-
-
-
-    stages {
         stage('Build') {
             steps {
                 echo 'Building..'
@@ -28,5 +24,4 @@ node {
                 echo 'Deploying....'
             }
         }
-      }
-    }
+}
