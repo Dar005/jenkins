@@ -19,7 +19,7 @@ node {
    }
    stage('Build') {
         echo "IN BUILD"
-        javac -cp C:\Program Files (x86)\Jenkins\workspace\Test\;. Student.java
+        
 
 
    }
