@@ -17,8 +17,7 @@ node {
    }
    stage('Build') {
         echo "IN BUILD"
-        chdir C:\Program Files (x86)\Jenkins\workspace\devops
-        javac Student.java
+        javac /Jenkins/workspace/Student.java
 
 
    }
