@@ -18,8 +18,8 @@ node {
 
    }
    stage('Build') {
-        echo "IN BUILD"
-        
+        echo "IN BUILD FILE"
+
 
 
    }
