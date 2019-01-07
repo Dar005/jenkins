@@ -15,7 +15,7 @@ pipeline {
             stage('Build') {
                 step{
                     echo "IN BUILD FILE"
-                    javac -cp "C:/jars/junit-4.12.jar;C:/jars/hamcrest-core-1.3.jar";. Student.java StudentTest.java
+                    javac -cp "/jars/junit-4.12.jar;C:/jars/hamcrest-core-1.3.jar";. Student.java StudentTest.java
                     echo "EXIT BUILD"
                 }
 
@@ -25,7 +25,7 @@ pipeline {
             step{
                   "IN TESTING"
                    echo "Testing"
-                   java -cp "C:/jars/junit-4.12.jar";"C:/jars/hamcrest-core-1.3.jar";. org.junit.runner.JUnitCore StudentTest
+                   java -cp "/jars/junit-4.12.jar";"/jars/hamcrest-core-1.3.jar";. org.junit.runner.JUnitCore StudentTest
                    echo "TESTS FINISHED....."
             }
         }
