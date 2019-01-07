@@ -15,7 +15,8 @@ pipeline {
             stage('Build') {
                 step{
                     echo "IN BUILD FILE"
-                    javac -cp junit-4.12.jar;hamcrest-core-1.3.jar;. Student.java StudentTest.java
+                    bat 'javac -cp junit-4.12.jar;hamcrest-core-1.3.jar;. Student.java StudentTest.java'
+
                     echo "EXIT BUILD"
                 }
 
@@ -25,7 +26,7 @@ pipeline {
             step{
                   "IN TESTING"
                    echo "Testing"
-                   java -cp junit-4.12.jar;hamcrest-core-1.3.jar;. org.junit.runner.JUnitCore StudentTest
+                   bat 'java -cp junit-4.12.jar;hamcrest-core-1.3.jar;. org.junit.runner.JUnitCore StudentTest'
                    echo "TESTS FINISHED....."
             }
         }
