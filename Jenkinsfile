@@ -21,13 +21,5 @@ pipeline {
                 }
 
         }
-
-        stage('Test') {
-            steps{
-                   echo "Testing"
-                   bat 'java -cp junit-4.12.jar;hamcrest-core-1.3.jar;. org.junit.runner.JUnitCore StudentTest'
-                   echo "TESTS FINISHED....."
-            }
-        }
    }
 }
