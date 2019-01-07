@@ -12,13 +12,12 @@ pipeline {
 
         }
 
-            stage('Build') {
-                steps{
-                    echo "IN BUILD FILE"
-                    bat 'javac -cp junit-4.12.jar;hamcrest-core-1.3.jar;. Student.java StudentTest.java'
-
-                    echo "EXIT BUILD"
-                }
+        stage('Build') {
+            steps{
+                echo "IN BUILD FILE"
+                bat 'javac -cp junit-4.12.jar;hamcrest-core-1.3.jar;. Student.java StudentTest.java'
+                echo "EXIT BUILD"
+            }
 
         }
    }
